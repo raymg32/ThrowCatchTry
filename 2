@@ -1,0 +1,26 @@
+package exceptionBasics;
+
+public class ATM {
+
+	public static void main(String[] args) {
+		CheckingAccount c1 = new CheckingAccount(0001);
+		System.out.println("Deposit $1,000...");
+		c1.deposit(1000);
+		try{
+			System.out.println("\nWithdrawing $100...");
+			c1.withdraw(100);
+			
+			System.out.println("\nWithdrawing $1,700...");
+			c1.withdraw(1700);
+			
+		}catch(InsuffiecientFundsException e){
+			System.out.println("Sorry, you are a broke mothafucka. You need $" + e.getAmount());
+			
+		}
+
+		
+		System.out.println("\nYour balance is " + c1.getBalance());
+		
+	}
+
+}
