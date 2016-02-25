@@ -1,0 +1,12 @@
+package exceptionBasics;
+
+public class InsuffiecientFundsException extends Exception {
+	private double amount;
+	public InsuffiecientFundsException(double amount){
+		this.amount = amount;
+	}
+	
+	public double getAmount(){
+		return amount;
+	}
+}
