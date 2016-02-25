@@ -1,0 +1,45 @@
+package exceptionBasics;
+//import javax.swing.JOptionPane;
+import java.util.Scanner;
+import java.util.InputMismatchException;;
+
+public class CatchTypeMismatch {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int c = 0;
+		
+		while(c == 0){
+			try{
+				System.out.println("Enter an integer: ");
+				int x = input.nextInt();
+				System.out.println("Thanks for your input " + x);
+				c++;
+			}catch(InputMismatchException e){
+				System.out.println("Pease enter an integer you fool!!");
+				System.out.println("Enter anotha1");
+				//int x = input.nextInt();
+				c = 0;
+			}
+			
+		}
+		
+		
+		
+		input.close();
+		
+		
+		
+		/*
+		int c = -1;
+		while(c < 0){
+			String input = JOptionPane.showInputDialog("Please enter your name: ");
+			if(input.length() > 0){
+				System.out.println("Thank you.");
+			}
+		}
+		*/
+	}
+
+}
